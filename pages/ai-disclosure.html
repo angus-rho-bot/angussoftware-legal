@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Disclosure — Angus Software</title>
+    <meta name="description" content="How Angus Software uses AI tools in software development, and our human-authorship policy for creative and copyrightable material.">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        h1 { color: #006A6A; }
+        h2 { margin-top: 2rem; color: #333; }
+        a { color: #006A6A; }
+        table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+        th, td { border: 1px solid #ddd; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.9rem; }
+        th { background: #f4f4f4; }
+        .back { margin-top: 2rem; }
+        .note { background: #f9f7f2; border-left: 3px solid #006A6A; padding: 0.75rem 1rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body>
+    <h1>AI Disclosure</h1>
+    <p><strong>Angus Software</strong> — Portland, Oregon. Last updated: October 3, 2026.</p>
+
+    <p>This page describes how artificial intelligence tools are used in the software
+    we build and publish, and states our position on authorship of creative work.</p>
+
+    <h2>The short version</h2>
+    <ul>
+        <li><strong>AI tools assist in writing code.</strong> We use
+        <a href="https://z.ai">Z.ai GLM</a> models, driven by
+        <a href="https://letta.com">Letta</a> agents, to draft, refactor, and review
+        code across our projects.</li>
+        <li><strong>All copy and copyrightable material is authored by humans.</strong>
+        Marketing copy, documentation prose, artwork, and any other creative or
+        copyrightable expression is written and selected by people. AI may assist
+        with mechanics (formatting, proofreading), but the words, images, and
+        decisions are ours.</li>
+        <li><strong>Code is FOSS where it's published at all.</strong> Our public
+        repositories carry standard open-source licenses (MIT or Apache-2.0).
+        Anything we distribute is distributable.</li>
+    </ul>
+
+    <h2>Tools we use</h2>
+    <table>
+        <tr><th>Tool</th><th>Role</th><th>Scope</th></tr>
+        <tr><td><a href="https://z.ai">Z.ai GLM</a> (GLM-4.x / 5.x family)</td><td>Language model</td><td>Code drafting, refactoring, review, test generation</td></tr>
+        <tr><td><a href="https://letta.com">Letta</a> (Letta Code)</td><td>Agent harness</td><td>Orchestrates AI agents that plan, edit, run builds, and manage CI</td></tr>
+        <tr><td>Woodpecker CI, Forgejo, and other FOSS infrastructure</td><td>Build &amp; hosting</td><td>Continuous integration and deployment, fully automated</td></tr>
+    </table>
+
+    <h2>Authorship &amp; copyright policy</h2>
+    <p>We follow the emerging consensus reflected in the U.S. Copyright Office's
+    guidance on AI-assisted works: material produced with AI assistance under
+    human direction, selection, and arrangement is human-authored and
+    copyrightable; purely machine-generated content is not treated as authored
+    material by us, and we do not claim copyright over it.</p>
+    <div class="note">
+        <strong>In practice:</strong> every piece of prose, artwork, music, or other
+        copyrightable expression associated with our projects is sourced from
+        humans. Where AI tools contributed to functional code, that code is
+        released under standard open-source licenses so anyone can use, inspect,
+        and redistribute it.
+    </div>
+
+    <h2>Per-project AI usage</h2>
+    <p>AI-assisted development is a spectrum. Our projects fall roughly into these
+    tiers:</p>
+    <table>
+        <tr><th>Project</th><th>License</th><th>AI involvement</th></tr>
+        <tr><td>AngusSoftwareApp (this website)</td><td>MIT</td><td>Substantial — designed and built with AI agents under human direction</td></tr>
+        <tr><td>Angus Tasks</td><td>MIT</td><td>Substantial — AI-assisted development, human-reviewed merges</td></tr>
+        <tr><td>Angus Software Theming</td><td>Apache-2.0</td><td>Substantial — AI-assisted development, human-reviewed merges</td></tr>
+        <tr><td>ChannelMaster</td><td>MIT</td><td>Moderate — AI-assisted development, human-reviewed merges</td></tr>
+        <tr><td>Temperlux</td><td>GPL-3.0</td><td>Moderate — AI-assisted development, human-reviewed merges</td></tr>
+        <tr><td>Angus Gradle Tools</td><td>Apache-2.0</td><td>Moderate — AI-assisted development, human-reviewed merges</td></tr>
+        <tr><td>Blocs &amp; Maverics / Gunboat God</td><td>Proprietary</td><td>Substantial — AI agents under human direction; source not published</td></tr>
+    </table>
+    <p>Client and third-party sites we host (such as
+    <a href="https://fpa.angussoftware.dev">Fountain Park Apts.</a>) follow the same
+    principle: code is AI-assisted and MIT-licensed; all band content, artwork,
+    and copy belong to the artist.</p>
+
+    <h2>Why disclose?</h2>
+    <p>Because it's true, and because pretending AI isn't in the toolchain would be
+    worse. We think the honest position is: state what the tools did, keep
+    authorship of creative work with humans, and make the functional output as
+    open as its license allows.</p>
+
+    <h2>Questions</h2>
+    <p>Reach us at <a href="mailto:ci@angussoftware.dev">ci@angussoftware.dev</a>.</p>
+
+    <p class="back"><a href="/">← Back to Angus Software</a></p>
+</body>
+</html>
