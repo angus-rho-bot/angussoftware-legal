@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Agents Fuel</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        h1 { color: #006A6A; }
+        h2 { margin-top: 2rem; color: #333; }
+        a { color: #006A6A; }
+        .back { margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <h1>Agents Fuel — Privacy Policy</h1>
+    <p><strong>Last updated:</strong> October 3, 2026</p>
+
+    <p>Agents Fuel (formerly Fuel Dashboard) is a usage-tracking dashboard for AI model quotas and spending, developed by Angus Software for Android, desktop, and web. This privacy policy describes how the app handles your data.</p>
+
+    <h2>What We Do NOT Collect</h2>
+    <p>Angus Software operates no backend for this app. It contains no analytics, no tracking, no advertisements. We never see your usage data, your API keys, or your spending.</p>
+
+    <h2>Where Your Data Goes</h2>
+    <ul>
+        <li><strong>Your device:</strong> API keys are stored in the Android Keystore (mobile) or Java Preferences (desktop); usage history lives in a local SQLite database; settings stay in local storage. Nothing leaves the device except the provider calls below.</li>
+        <li><strong>Your AI providers, directly:</strong> to display quota and usage, the app calls your providers' APIs (for example z.ai or Letta Cloud) from your device, using API keys you supply. Requests go directly to those providers under their policies — we are not a party to them.</li>
+    </ul>
+
+    <h2>API Keys</h2>
+    <p>Provider API keys are stored in your device's local storage and used only to query that provider's API from your device. Keys are never transmitted anywhere except to their own provider, never logged to any server we operate, and can be removed at any time in Settings.</p>
+
+    <h2>Optional Features</h2>
+    <ul>
+        <li><strong>Issue reporting:</strong> if you configure a Forgejo API token, the in-app "Report an issue" feature creates issues on the Angus Software issue tracker using your token. The report content is what you type; nothing else is attached.</li>
+        <li><strong>Letta usage metering</strong> (optional): if enabled, the app calls the Letta API to read your own usage numbers. Only enabled if you turn it on.</li>
+        <li><strong>Local server &amp; sync:</strong> the app runs an API server on your device (localhost by default) and can sync settings to your own mobile device over your LAN (opt-in) or by QR code. No cloud copy of anything exists.</li>
+    </ul>
+
+    <h2>Data Deletion</h2>
+    <p>Uninstalling the app (or clearing app data) removes all locally stored keys, settings, and history.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Agents Fuel is a developer tool intended for adults. We collect no data from anyone.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Changes will be reflected on this page with an updated revision date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions: open an issue at <a href="https://github.com/coda-rho-bot/fuel-dashboard-kmp">github.com/coda-rho-bot/fuel-dashboard-kmp</a>.</p>
+
+    <p class="back"><a href="/">&larr; Angus Software Legal</a></p>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Agents Beamdown</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        h1 { color: #006A6A; }
+        h2 { margin-top: 2rem; color: #333; }
+        a { color: #006A6A; }
+        .back { margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <h1>Agents Beamdown — Privacy Policy</h1>
+    <p><strong>Last updated:</strong> October 3, 2026</p>
+
+    <p>Agents Beamdown is an Android application (phone and Wear OS watch) that runs an AI agent runtime — a full Linux environment with the Letta Code agent server — directly on your device. This privacy policy describes how the app handles your data.</p>
+
+    <h2>What We Do NOT Collect</h2>
+    <p>Angus Software does <strong>NOT</strong> operate any server that receives your data. The app contains no analytics, no tracking, no advertisements, and no telemetry back to us. We cannot see your device, your agent, or anything it does.</p>
+
+    <h2>Where Your Data Goes</h2>
+    <p>Your data stays in two places, both under your control:</p>
+    <ul>
+        <li><strong>Your device:</strong> the agent runtime, its files, and its memory are stored locally in the app's storage.</li>
+        <li><strong>Your chosen AI provider:</strong> to run the agent, you supply your own API key for a model provider of your choice (for example, z.ai or Letta Cloud). Prompts and agent activity are sent <em>directly from your device to that provider</em>, encrypted, under that provider's own privacy policy. We never see or relay this traffic.</li>
+    </ul>
+
+    <h2>Optional Device Data (Consent-Gated Telemetry)</h2>
+    <p>The app can expose selected device data to <em>your own agent</em> — never to us. Every channel is off by default and requires an explicit in-app grant:</p>
+    <ul>
+        <li><strong>Health data</strong> (heart rate, steps, sleep, skin temperature): read on demand via Health Connect (phone) or Health Services (watch). Your agent can query readings only after you grant access per type; you can revoke at any time in system settings.</li>
+        <li><strong>Location:</strong> approximate device location, readable by your agent only after you grant location permission. Revocable at any time.</li>
+        <li><strong>Notifications:</strong> with a notification-listener grant, your agent can see notification titles and app names. Message <em>content</em> is only visible in the active screen session while you are using the device — it is never stored or transmitted by the app itself.</li>
+        <li><strong>Screen control</strong> (accessibility service): with the accessibility grant, your agent can read what is on screen and tap, swipe, and type on your behalf. A persistent system indicator shows when it is active; revoke any time in Settings &gt; Accessibility.</li>
+    </ul>
+    <p>None of this data leaves your device unless you (or an agent acting on your instructions) explicitly send it somewhere. There is no background collection, no periodic sampling, no upload.</p>
+
+    <h2>App Updates</h2>
+    <p>The app checks for updates by fetching a version file from <strong>dl.angussoftware.dev</strong>. This check reveals your IP address to our static file server (standard web request) but carries no identifier, no device fingerprint, and no usage data. Nothing is logged beyond routine server operation.</p>
+
+    <h2>Third-Party Services</h2>
+    <ul>
+        <li><strong>Model providers</strong> (your choice): see their policies for how prompts are handled.</li>
+        <li><strong>Bundled open-source components:</strong> the app embeds a Linux runtime and Node.js; these run entirely on your device.</li>
+    </ul>
+
+    <h2>Data Deletion</h2>
+    <p>Uninstalling the app removes the runtime, the agent environment, and all locally stored data. Telemetry grants are revoked automatically when the app is uninstalled.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Agents Beamdown is a developer tool intended for adults. We collect no data from anyone.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Changes will be reflected on this page with an updated revision date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions: open an issue at <a href="https://github.com/coda-rho-bot/agents-beamdown">github.com/coda-rho-bot/agents-beamdown</a>.</p>
+
+    <p class="back"><a href="/">&larr; Angus Software Legal</a></p>
+</body>
+</html>
