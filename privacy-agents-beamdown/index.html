@@ -26,7 +26,7 @@
     <p>Agents Beamdown is an Android application (phone and Wear OS watch) that runs an AI agent runtime — a full Linux environment with the Letta Code agent server — directly on your device. This privacy policy describes how the app handles your data.</p>
 
     <h2>What We Do NOT Collect</h2>
-    <p>Angus Software does <strong>NOT</strong> operate any server that receives your data. The app contains no analytics, no tracking, no advertisements, and no telemetry back to us. We cannot see your device, your agent, or anything it does.</p>
+    <p>Angus Software operates no backend for this app beyond the static download server described under App Updates. The app contains no analytics, no tracking, no advertisements, and no crash reporting. We receive no data about your device beyond standard web requests (IP, device model in the User-Agent) to our download server.</p>
 
     <h2>Where Your Data Goes</h2>
     <p>Your data stays in two places, both under your control:</p>
@@ -35,18 +35,21 @@
         <li><strong>Your chosen AI provider:</strong> to run the agent, you supply your own API key for a model provider of your choice (for example, z.ai or Letta Cloud). Prompts and agent activity are sent <em>directly from your device to that provider</em>, encrypted, under that provider's own privacy policy. We never see or relay this traffic.</li>
     </ul>
 
+    <h2>File Access</h2>
+    <p>The app requests storage access (all files on the device) during setup — this is what lets your agents read and write files, the core function. Anything in shared storage is visible to agents you dispatch: they can read, modify, and delete files in Download, Documents, DCIM, and other shared folders. Files agents write to shared storage remain after uninstall unless deleted manually. Storage access can be revoked in system settings at any time (agents will then be unable to work with files).</p>
+
     <h2>Optional Device Data (Consent-Gated Telemetry)</h2>
     <p>The app can expose selected device data to <em>your own agent</em> — never to us. Every channel is off by default and requires an explicit in-app grant:</p>
     <ul>
         <li><strong>Health data</strong> (heart rate, steps, sleep, skin temperature): read on demand via Health Connect (phone) or Health Services (watch). Your agent can query readings only after you grant access per type; you can revoke at any time in system settings.</li>
         <li><strong>Location:</strong> approximate device location, readable by your agent only after you grant location permission. Revocable at any time.</li>
-        <li><strong>Notifications:</strong> with a notification-listener grant, your agent can see notification titles and app names. Message <em>content</em> is only visible in the active screen session while you are using the device — it is never stored or transmitted by the app itself.</li>
+        <li><strong>Notifications:</strong> with a notification-listener grant, the app keeps the titles, app names, and text of your most recent 50 notifications in memory (refreshed continuously while the grant is on). Your agent can read this list during a consent window you approve (up to one hour). The app itself does not write this data to disk — but your agent may store what it reads in its own on-device memory.</li>
         <li><strong>Screen control</strong> (accessibility service): with the accessibility grant, your agent can read what is on screen and tap, swipe, and type on your behalf. A persistent system indicator shows when it is active; revoke any time in Settings &gt; Accessibility.</li>
     </ul>
-    <p>None of this data leaves your device unless you (or an agent acting on your instructions) explicitly send it somewhere. There is no background collection, no periodic sampling, no upload.</p>
+    <p>Consent windows grant device control for a time box (up to one hour), not only while the screen is on — approve them thoughtfully. An agent with UI control can also, in principle, navigate Android's settings and tap "Allow" on system permission dialogs — treat agent consent as you would handing the phone to a person. None of this data leaves your device unless you (or an agent acting on your instructions) send it somewhere; nothing is collected for our benefit.</p>
 
     <h2>App Updates</h2>
-    <p>The app checks for updates by fetching a version file from <strong>dl.angussoftware.dev</strong>. This check reveals your IP address to our static file server (standard web request) but carries no identifier, no device fingerprint, and no usage data. Nothing is logged beyond routine server operation.</p>
+    <p>The app checks for updates by fetching a version file from <strong>dl.angussoftware.dev</strong> — on app start, after reboots, and roughly every 5 hours. This request reveals your IP address and carries Android's standard User-Agent (device model and OS version) to our static file server, like any web request. No app identifier, account, or usage data is sent. The app also contacts <strong>registry.npmjs.org</strong> (latest Letta Code version check, at most hourly) and may download runtime components from <strong>github.com</strong> when on-demand tools are installed; DNS lookups from the embedded Linux environment resolve via Google and Cloudflare public DNS.</p>
 
     <h2>Third-Party Services</h2>
     <ul>
@@ -55,7 +58,7 @@
     </ul>
 
     <h2>Data Deletion</h2>
-    <p>Uninstalling the app removes the runtime, the agent environment, and all locally stored data. Telemetry grants are revoked automatically when the app is uninstalled.</p>
+    <p>Uninstalling the app removes the runtime, the agent environment, and all app-private data (including your stored API key). Telemetry grants are revoked automatically. Files agents wrote to shared storage (e.g. Download) remain — delete manually if wanted.</p>
 
     <h2>Children's Privacy</h2>
     <p>Agents Beamdown is a developer tool intended for adults. We collect no data from anyone.</p>
